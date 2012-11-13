@@ -7,5 +7,5 @@
 
 (defn -main
   ([port]
-     (start port))
-  ([] (start (or (System/getenv "PORT") 8000))))
+     (start (Integer/parseInt port)))
+  ([] (start (Integer/parseInt (or (System/getenv "PORT") "8000")))))
