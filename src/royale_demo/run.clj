@@ -3,9 +3,9 @@
             [royale-demo.web :as royale]))
 
 (defn start [port]
-  (ring/run-jetty #'royale/web-app {:port (or port 8000) :join? false}))
+  (ring/run-jetty #'royale/web-app {:port port :join? false}))
 
 (defn -main
   ([port]
      (start port))
-  ([] (start 8000)))
+  ([] (start (or (System/getenv "PORT") 8000))))

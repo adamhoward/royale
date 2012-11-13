@@ -9,4 +9,5 @@
                  [hiccup "1.0.1"]
                  [org.clojure/java.jmx "0.2.0"]
                  [clj-stacktrace "0.2.5"]]
+  :min-lein-version "2.0.0"
   :main royale-demo.run)
